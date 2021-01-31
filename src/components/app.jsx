@@ -18,18 +18,13 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <div className="leftS">
-          <div className="selected-gif">
-            <FlatList flatData={this.state.flatData} selectFlat={this.selectFlat} />
-          </div>
-        </div>
-        <div className="rightS">
-          {/*<GMap />*/}
-        </div>
-      </div>
+    <div>
+      <FlatList flatData={this.state.flatData} selectFlat={this.selectFlat} />
+      <div className="map-container"/>
+    </div>
     );
   }
+
 }
 
 export default App;
