@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import Flat from './flat';
 
 
-class FlatList extends Component {
-  render(){
+const FlatList = (props) => {
     return (
-      <p> ANYAD </p>,
-      <textarea name="" id="" cols="30" rows="10" value={this.props}></textarea>
-      )
-  }
-}
-
+      <div className="flat-list">
+        {props.flatData.map(flat => <Flat data={flat} key={flat.name} />)}
+      </div>
+      );
+  };
 
 export default FlatList;
