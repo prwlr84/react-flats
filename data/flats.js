@@ -4,7 +4,7 @@ const flats = [
     imageUrl: "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat1.jpg",
     price: 164,
     priceCurrency: "EUR",
-    lat: 48.884211,
+    lat: 48.584211,
     lng: 2.34689
   },
   {
@@ -12,7 +12,7 @@ const flats = [
     imageUrl: "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat2.jpg",
     price: 200,
     priceCurrency: "EUR",
-    lat: 48.885707,
+    lat: 48.985707,
     lng: 2.343543
   },
   {
@@ -36,7 +36,7 @@ const flats = [
     imageUrl: "https://raw.githubusercontent.com/lewagon/flats-boilerplate/master/images/flat5.jpg",
     price: 135,
     priceCurrency: "EUR",
-    lat: 48.888839,
+    lat: 47.888839,
     lng: 2.339208
   },
   {
@@ -45,7 +45,7 @@ const flats = [
     price: 90,
     priceCurrency: "EUR",
     lat: 48.827855,
-    lng: 2.350774
+    lng: 2.650774
   }
 ];
 
