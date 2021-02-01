@@ -2,19 +2,24 @@ import React, { Component } from 'react';
 import Flat from './flat.jsx';
 import FlatList from './flat-list.jsx';
 import flats from '../../data/flats'
-import SimpleMap from './map.jsx'
+import { SimpleMap, Marker } from './map.jsx'
 
 class App extends Component {
   constructor(props){
     super(props);
 
     this.state = {
-      flatData: flats
+      flatData: flats,
+      center: { lat: 48.8566, lng: 2.3522 },
+      markerCenter: { lat: 48, lng: 2 },
+      zoom: 12
     }
   }
 
-  selectFlat = () => {
-
+  selectFlat = (lat,lng) => {
+    this.setState({
+      markerCenter: { lat: lat, lng: lng }
+    });
   }
 
   render() {
@@ -22,7 +27,7 @@ class App extends Component {
     <div>
       <FlatList flatData={this.state.flatData} selectFlat={this.selectFlat} />
       <div className="map-container">
-        <SimpleMap center={{ lat: 45.1, lng: -3.8 }} zoom={11}/>
+        <SimpleMap center={this.state.center} zoom={this.state.zoom} lat={this.state.markerCenter.lat} lng={this.state.markerCenter.lng}/>
       </div>
     </div>
     );
